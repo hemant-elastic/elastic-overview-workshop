@@ -96,4 +96,4 @@ function Copy-Data()
 }
 Setup-Prereqs
 Download-Beats
-#Copy-Data
+Copy-Data
