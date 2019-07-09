@@ -4,8 +4,8 @@ $downloadPath = "C:\Users\Administrator\Downloads\"
 # Beats used in the workshop
 $filebeat_link = 'https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.2.0-windows-x86_64.zip'
 $metricbeat_link = 'https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.2.0-windows-x86_64.zip'
-$heartbeat_link = 'https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.2.0-windows-x86_64.zip'
-$winlogbeat_link = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.2.0-windows-x86_64.zip'
+#$heartbeat_link = 'https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.2.0-windows-x86_64.zip'
+#$winlogbeat_link = 'https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.2.0-windows-x86_64.zip'
 
 
 function Setup-Prereqs ()
@@ -48,9 +48,9 @@ function Download-Beats(){
 
     $beats = @(
     @{title='Filebeat';url=$filebeat_link;Arguments=''},
-    @{title='Metricbeat';url=$metricbeat_link;Arguments=''},
-    @{title='Heartbeat';url=$heartbeat_link;Arguments=''},
-    @{title='Winlogbeat';url=$winlogbeat_link;Arguments=''}
+    @{title='Metricbeat';url=$metricbeat_link;Arguments=''}
+ #  @{title='Heartbeat';url=$heartbeat_link;Arguments=''},
+ #  @{title='Winlogbeat';url=$winlogbeat_link;Arguments=''}
     )
     
     foreach ($beat in $beats) {
@@ -96,4 +96,4 @@ function Copy-Data()
 }
 Setup-Prereqs
 Download-Beats
-Copy-Data
+#Copy-Data
