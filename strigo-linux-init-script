@@ -1,3 +1,0 @@
-git clone https://github.com/hemant-elastic/observability-workshop.git
-cd observability-workshop
-./linux-prereqs-setup.sh
